@@ -1,8 +1,8 @@
 package com.sunnyweather.android.logic.model
 
 import android.provider.ContactsContract
-import androidx.work.Data
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class DailyResponse(val status: String, val result: Result) {
 
@@ -12,7 +12,7 @@ data class DailyResponse(val status: String, val result: Result) {
 
     data class Temperature(val max: Float, val min: Float)
 
-    data class Skycon(val value: String, val data: Data)
+    data class Skycon(val value: String, val date: Date)
 
     data class LifeIndex(val coldRisk: List<LifeDescription>, val carWashing: List<LifeDescription>, val ultraviolet: List<LifeDescription>, val dressing: List<LifeDescription>)
 
